@@ -8,7 +8,7 @@ import {ApiService} from './api.service';
 })
 export class AppComponent implements OnInit {
 
-
+  person = [{name : 'Charles', surname : 'Xavier', mail : 'charles.xavier@xmen.com'}];
   constructor(private service: ApiService) {
   }
 
@@ -20,17 +20,24 @@ export class AppComponent implements OnInit {
   showPeople() {
     this.service.getAllPeople().subscribe(
       next => console.log(next),
-      error => console.log(error),
-      () => console.log('it is working fine')
+      error => console.log(error)
     );
   }
 
   showPerson(id: number) {
     this.service.getPerson(id).subscribe(
       data => console.log(data),
-      error => console.log(error),
-      () => console.log('it is working fine too')
+      error => console.log(error)
     );
   }
+
+  /*addPerson() {
+    this.service.createPerson(this.person).subscribe(
+      (data: any) => console.log(data),
+      error => console.log(error),
+      () => console.log('created')
+    );
+  }
+  */
 
 }
