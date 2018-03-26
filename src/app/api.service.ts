@@ -17,4 +17,8 @@ export class ApiService {
   public getPerson(id: number) {
     return this.http.get(API_URL + 'person/' + id);
   }
+
+  public createPerson(person) {
+    return this.http.post(API_URL + 'person',  person);
+  }
 }
