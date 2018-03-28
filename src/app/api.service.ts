@@ -19,6 +19,15 @@ export class ApiService {
   }
 
   public createPerson(person) {
-    return this.http.post(API_URL + 'person',  person);
+    return this.http.post(API_URL + 'person', person);
   }
+
+  public getAllHomes() {
+    return this.http.get(API_URL + 'home');
+  }
+
+  public getHome(id: number) {
+    return this.http.get(API_URL + 'home/' + id);
+  }
+
 }
