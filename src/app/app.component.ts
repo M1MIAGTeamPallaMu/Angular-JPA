@@ -8,13 +8,16 @@ import {ApiService} from './api.service';
 })
 export class AppComponent implements OnInit {
 
-  person = [{name : 'Charles', surname : 'Xavier', mail : 'charles.xavier@xmen.com'}];
+  person = [{name: 'Charles', surname: 'Xavier', mail: 'charles.xavier@xmen.com'}];
+
   constructor(private service: ApiService) {
   }
 
   ngOnInit() {
-    this.showPeople();
+    // this.showPeople();
     this.showPerson(1);
+    // this.showHomes();
+    this.showHome(1);
   }
 
   showPeople() {
@@ -26,6 +29,20 @@ export class AppComponent implements OnInit {
 
   showPerson(id: number) {
     this.service.getPerson(id).subscribe(
+      data => console.log(data),
+      error => console.log(error)
+    );
+  }
+
+  showHomes() {
+    this.service.getAllHomes().subscribe(
+      data => console.log(data),
+      error => console.log(error)
+    );
+  }
+
+  showHome(id: number) {
+    this.service.getHome(id).subscribe(
       data => console.log(data),
       error => console.log(error)
     );
