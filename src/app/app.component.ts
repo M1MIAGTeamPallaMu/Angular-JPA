@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ApiService} from './api.service';
+import {HomeService} from './home/home.service';
+import {PersonService} from './person/person.service';
 
 @Component({
   selector: 'app-root',
@@ -8,53 +9,28 @@ import {ApiService} from './api.service';
 })
 export class AppComponent implements OnInit {
 
-  person = [{name: 'Charles', surname: 'Xavier', mail: 'charles.xavier@xmen.com'}];
-
-  constructor(private service: ApiService) {
-  }
+  constructor(
+    private homeService: HomeService,
+    private personService: PersonService,
+              ) {}
 
   ngOnInit() {
-    // this.showPeople();
-    this.showPerson(1);
-    // this.showHomes();
-    this.showHome(1);
+    this.showPeople();
+    this.showHomes();
   }
 
   showPeople() {
-    this.service.getAllPeople().subscribe(
+    this.personService.getAllPeople().subscribe(
       next => console.log(next),
-      error => console.log(error)
-    );
-  }
-
-  showPerson(id: number) {
-    this.service.getPerson(id).subscribe(
-      data => console.log(data),
-      error => console.log(error)
+      error => console.log(error),
     );
   }
 
   showHomes() {
-    this.service.getAllHomes().subscribe(
+    this.homeService.getAllHomes().subscribe(
       data => console.log(data),
-      error => console.log(error)
-    );
-  }
-
-  showHome(id: number) {
-    this.service.getHome(id).subscribe(
-      data => console.log(data),
-      error => console.log(error)
-    );
-  }
-
-  /*addPerson() {
-    this.service.createPerson(this.person).subscribe(
-      (data: any) => console.log(data),
       error => console.log(error),
-      () => console.log('created')
     );
   }
-  */
 
 }
