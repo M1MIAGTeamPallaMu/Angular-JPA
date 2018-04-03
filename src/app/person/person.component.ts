@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PersonService} from "./person.service";
 
 @Component({
   selector: 'app-person',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonComponent implements OnInit {
 
-  constructor() { }
+  people: any;
+
+  constructor(private personService: PersonService) { }
 
   ngOnInit() {
+    this.personService.getAllPeople().subscribe(
+      data => this.people = data,
+      error => console.log(error),
+    );
   }
 
 }

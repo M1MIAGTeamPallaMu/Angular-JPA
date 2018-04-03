@@ -1,3 +1,16 @@
-<p>
-  person works!
-</p>
+<h2>Personnes</h2>
+
+<h3>Liste des personnes référencées</h3>
+
+<table class="ui celled table">
+  <thead><tr><th>Identifiant</th><th>Prenom</th><th>Nom</th><th>Mail</th><th>Details</th></tr></thead>
+  <tbody>
+  <tr *ngFor="let person of people">
+    <td>{{person.id}}</td>
+    <td>{{person.name}}</td>
+    <td>{{person.surname}}</td>
+    <td><a href="mailto:{{person.mail}}">{{person.mail}}</a></td>
+    <td><a>Voir</a></td>
+  </tr>
+  </tbody>
+</table>
