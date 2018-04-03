@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {Home} from './home.model';
 
 
 @Injectable()
@@ -9,11 +10,11 @@ export class HomeService {
   }
 
   public getAllHomes() {
-    return this.http.get('rest/home');
+    return this.http.get<Home[]>('rest/home');
   }
 
   public getHome(id: number) {
-    return this.http.get('rest/home/' + id);
+    return this.http.get<Home>('rest/home/' + id);
   }
 
 }

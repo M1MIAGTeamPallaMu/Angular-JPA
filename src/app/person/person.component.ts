@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {PersonService} from "./person.service";
+import {PersonService} from './person.service';
+import {Person} from './person.model';
 
 @Component({
   selector: 'app-person',
@@ -8,7 +9,7 @@ import {PersonService} from "./person.service";
 })
 export class PersonComponent implements OnInit {
 
-  people: any;
+  people: Person[];
 
   constructor(private personService: PersonService) { }
 

@@ -9,7 +9,7 @@ import {Home} from './home.model';
 })
 export class HomeComponent implements OnInit {
 
-  homes: any;
+  homes: Home[];
 
   constructor(private homeService: HomeService) { }
 
