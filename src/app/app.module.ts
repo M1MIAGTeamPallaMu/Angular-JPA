@@ -8,6 +8,7 @@ import {PersonService} from './person/person.service';
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { PersonComponent } from './person/person.component';
+import {routes} from './app.router';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { PersonComponent } from './person/person.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    routes
   ],
   providers: [
     HomeService,
