@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {HomeService} from './home.service';
+import {Home} from './home.model';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  homes: any;
+
+  constructor(private homeService: HomeService) { }
 
   ngOnInit() {
+    this.homeService.getAllHomes().subscribe(
+      data => this.homes = data,
+      error => console.log(error),
+    );
   }
 
 }
