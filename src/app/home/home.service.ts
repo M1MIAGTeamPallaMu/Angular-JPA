@@ -1,8 +1,6 @@
 import {Injectable} from '@angular/core';
-import {environment} from '../../environments/environment';
 import {HttpClient} from '@angular/common/http';
 
-const API_URL = environment.jpaUrl;
 
 @Injectable()
 export class HomeService {
@@ -11,11 +9,11 @@ export class HomeService {
   }
 
   public getAllHomes() {
-    return this.http.get(API_URL + 'home');
+    return this.http.get('rest/home');
   }
 
   public getHome(id: number) {
-    return this.http.get(API_URL + 'home/' + id);
+    return this.http.get('rest/home/' + id);
   }
 
 }

@@ -5,5 +5,4 @@
 
 export const environment = {
   production: false,
-  jpaUrl : 'http://localhost:8080/rest/'
 };
