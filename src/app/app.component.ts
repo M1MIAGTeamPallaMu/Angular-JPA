@@ -9,28 +9,9 @@ import {PersonService} from './person/person.service';
 })
 export class AppComponent implements OnInit {
 
-  constructor(
-    private homeService: HomeService,
-    private personService: PersonService,
-              ) {}
+  constructor() {}
 
   ngOnInit() {
-    this.showPeople();
-    this.showHomes();
-  }
-
-  showPeople() {
-    this.personService.getAllPeople().subscribe(
-      next => console.log(next),
-      error => console.log(error),
-    );
-  }
-
-  showHomes() {
-    this.homeService.getAllHomes().subscribe(
-      data => console.log(data),
-      error => console.log(error),
-    );
   }
 
 }
