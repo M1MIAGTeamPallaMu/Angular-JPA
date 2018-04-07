@@ -9,15 +9,21 @@ import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { PersonComponent } from './person/person.component';
 import {routes} from './app.router';
+import { PersonDetailsComponent } from './person/person-details/person-details.component';
+import { PersonFormComponent } from './person/person-form/person-form.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PersonComponent
+    PersonComponent,
+    PersonDetailsComponent,
+    PersonFormComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HttpClientModule,
     routes

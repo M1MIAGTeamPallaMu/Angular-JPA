@@ -1,0 +1,28 @@
+
+  <h2>Détail de l'utilisateur {{person?.id}}</h2>
+  <ul>
+    <li>Nom :  {{person?.name}}</li>
+    <li>Prenom :  {{person?.surname}}</li>
+    <li>Mail :  {{person?.mail}}</li>
+  </ul>
+
+  <h3>Liste de ses maisons</h3>
+
+  <p *ngIf="homes.length === 0"> Cette personne n'a aucune maison !</p>
+  <table *ngIf="homes.length > 0" class="ui celled table">
+    <thead><tr><th>Identifiant</th><th>Nombre de pièces</th><th>Taille en m²</th></tr></thead>
+    <tbody>
+    <tr *ngFor="let home of homes">
+      <td>{{home.homeId}}</td>
+      <td>{{home.rooms}}</td>
+      <td>{{home.size}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <button (click)="location.back();" class="ui basic labeled icon button">
+    Retour
+    <i class="left arrow icon"></i>
+  </button>
+
+

@@ -1,0 +1,24 @@
+<h2>Ajout d'une personne</h2>
+
+<form (ngSubmit)="save()" #personForm="ngForm" class="ui form">
+  <div class="field">
+    <label>Nom</label>
+    <input name="surname" [(ngModel)]="person.surname" type="text" required />
+  </div>
+  <div class="field">
+    <label>Prenom</label>
+    <input name="name" [(ngModel)]="person.name" type="text" required />
+  </div>
+  <div class="field">
+    <label>Mail</label>
+    <input  name="mail" [(ngModel)]="person.mail" type="email" required>
+  </div>
+  <div class="ui buttons">
+    <button (click)="location.back();" class="ui icon button">
+      Annuler
+    </button>
+    <button type="submit" class="ui positive icon button">
+      Enregistrer
+    </button>
+  </div>
+</form>
