@@ -28,7 +28,6 @@ export class PersonDetailsComponent implements OnInit {
       data => this.homes = data,
       error => console.log(error),
     );
-
-    console.log(this.homes);
+    
   }
 }
