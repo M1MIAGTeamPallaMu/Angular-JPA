@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
+## What is this application for ?
+
+This application is an University project made with Angular. The goal is to make a simple app which can communicate with a backend we did earlier in the year.
+In a nutshell : basic crud operations with angular. 
+Our application allows the user to add a person, see the list of all the people added on the app and the details of a person (name, mail, homes he have).
+The user can also see a list of homes but can't add a home ... yet.
+
 ## Libraries
 
 The project run with Angular's latest version. (https://angular.io/)
