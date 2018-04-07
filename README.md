@@ -15,3 +15,10 @@ Yarn start automatically `ng serve --proxy-config proxy.conf.json` which allows 
 By default the project runs on http://localhost:4200 and is proxied to http://localhost:8080 port to communicate with the tomcat server of the Servlet_JAXRS backend.
 
 You can modify proxy's parameters in proxy.conf.json.
+
+
+## Here are some screenshot of the app : 
+
+![Person page](https://image.ibb.co/fMN8nH/Capture.png)
+![Person Detail](https://image.ibb.co/g7ucgc/Capture2.png)
+![Form](https://image.ibb.co/n3S8nH/Capturea.png)
