@@ -12,6 +12,7 @@ import {routes} from './app.router';
 import { PersonDetailsComponent } from './person/person-details/person-details.component';
 import { PersonFormComponent } from './person/person-form/person-form.component';
 import {FormsModule} from '@angular/forms';
+import { MainPageComponent } from './main-page/main-page.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import {FormsModule} from '@angular/forms';
     PersonComponent,
     PersonDetailsComponent,
     PersonFormComponent,
+    MainPageComponent,
   ],
   imports: [
     FormsModule,
