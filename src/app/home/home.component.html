@@ -1,16 +1,13 @@
 <h2>Maisons</h2>
 
 <h3>Liste des maisons référencées</h3>
-
 <table class="ui celled table">
-  <thead><tr><th>Identifiant</th><th>Nombre de pièces</th><th>Taille en m²</th><th>Adresse</th><th>Propriétaire</th></tr></thead>
+  <thead><tr><th>Identifiant</th><th>Nombre de pièces</th><th>Taille en m²</th></tr></thead>
   <tbody>
   <tr *ngFor="let home of homes">
     <td>{{home.homeId}}</td>
     <td>{{home.rooms}}</td>
     <td>{{home.size}}</td>
-    <td>{{home.adress}}</td>
-    <td></td>
   </tr>
   </tbody>
 </table>
